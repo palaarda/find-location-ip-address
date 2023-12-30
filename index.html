@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container main-container">
+    <div class="container main-container" id="mainContainer">
         <form action="">
             <input type="text" name="ip" id="ipInput" placeholder="Ip Address Here" pattern="^([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3})$">
             <button type="button" class="btn btn-warning BtnGetLoc" onclick="getVal()">Get Location</button>
         </form>
     </div>
-    <div class="container result-container">
+    <div class="container result-container" id="resultContainer">
         <div class="results">
-            <button class="btnBack"><i class="bi bi-x-lg"></i></button>
+            <button class="btnBack" onclick="quitResultCont()"><i class="bi bi-x-lg"></i></button>
             <div class="result-content">
                 <p>City: <span id="city"></span></p> 
                 <p>Country: <span id="country"></span></p>
