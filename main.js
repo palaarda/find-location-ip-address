@@ -10,6 +10,9 @@ const zipcode = document.getElementById('zipcode');
 const resultContainer = document.getElementById('resultContainer');
 const mainContainer = document.getElementById('mainContainer');
 
+const ipInput = document.getElementById('ipInput');
+
+
 async function getLoc() {
     const con = await fetch('https://api.collectapi.com/ip/ipToLocation?data.ip=95.8.131.139', {
         method: 'GET',
@@ -25,10 +28,14 @@ async function getLoc() {
 getLoc();
 
 function getVal(){
-    const getValue = document.getElementById('ipInput').value;
-    mainContainer.style.display = 'none';
-    resultContainer.style.display = 'flex'
-    console.log(getValue);
+    if(ipInput === 0 || ipInput < 15){
+        alert("götlük var suan");
+    }else {
+        const ipInputValue = ipInput.value;
+        mainContainer.style.display = 'none';
+        resultContainer.style.display = 'flex'
+        console.log(ipInputValue);
+    }
 }
 function quitResultCont(){
     mainContainer.style.display = 'flex';
