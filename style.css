@@ -10,7 +10,7 @@ body {
 }
 
 .main-container {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 30rem;
@@ -44,7 +44,7 @@ body {
 }
 
 .result-container {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 30rem;
