@@ -11,7 +11,7 @@ const resultContainer = document.getElementById('resultContainer');
 const mainContainer = document.getElementById('mainContainer');
 
 const ipInput = document.getElementById('ipInput');
-const ipInputValue = document.getElementById('ipInput').value;
+const ipInputValue = ipInput.value;
 
 function getVal(){    
     mainContainer.style.display = 'none';
