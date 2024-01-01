@@ -11,10 +11,18 @@ const resultContainer = document.getElementById('resultContainer');
 const mainContainer = document.getElementById('mainContainer');
 
 const ipInput = document.getElementById('ipInput');
+const ipInputValue = document.getElementById('ipInput').value;
 
+function getVal(){    
+    mainContainer.style.display = 'none';
+    resultContainer.style.display = 'flex'
+    console.log(ipInputValue);
+    getLoc();
+}
 
-async function getLoc() {
-    const con = await fetch('https://api.collectapi.com/ip/ipToLocation?data.ip=95.8.131.139', {
+async function getLoc(ipSS) {
+    ipSS = ipInputValue
+    const con = await fetch("https://api.collectapi.com/ip/ipToLocation?data.ip=" + ipSS , {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -25,18 +33,9 @@ async function getLoc() {
     const result = dataJson.result
     console.log(result);
 }
-getLoc();
 
-function getVal(){
-    if(ipInput === 0 || ipInput < 15){
-        alert("götlük var suan");
-    }else {
-        const ipInputValue = ipInput.value;
-        mainContainer.style.display = 'none';
-        resultContainer.style.display = 'flex'
-        console.log(ipInputValue);
-    }
-}
+
+
 function quitResultCont(){
     mainContainer.style.display = 'flex';
     resultContainer.style.display = 'none'
