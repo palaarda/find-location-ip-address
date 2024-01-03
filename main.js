@@ -41,6 +41,8 @@ async function getLoc(ipVal) {
     zipcode.innerHTML = result.zipcode;
 }
 
+
+
 function quitResultCont(){
     mainContainer.style.display = 'flex';
     resultContainer.style.display = 'none'
