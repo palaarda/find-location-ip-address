@@ -25,7 +25,7 @@ async function getLoc(ipVal) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'apikey ***REMOVED***'
+            'Authorization': 'YOUR_API_KEY_HERE'
         }
     });
     const dataJson = await con.json();
